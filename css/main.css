@@ -1,0 +1,21 @@
+body {
+	color: #eee;
+}
+
+.myDiv {
+	padding: 6px;
+	margin: 0 10px 20px;
+	font: 12px  Arial, sans-serif;
+}
+
+.div_1 {
+	background: #000;
+}
+
+.div_2 {
+	background: #999;
+}
+
+.div_3 {
+	background: #467af2;
+}
