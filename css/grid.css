@@ -1,0 +1,63 @@
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color: #7f8c8c;
+	font: 12px 'Open Sans', Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 10px;
+}
+
+h4, .h4 {
+	font-size: 16px;
+}
+
+.row:before, .row:after {
+	content:"";
+	display: table ;
+	clear:both;
+}
+
+.my-row {
+	margin-bottom: 40px;
+}
+
+[class*='my-cell-'] {
+	float: left;
+	margin-right: 30px;
+}
+
+[class*='my-cell-']:last-of-type {
+	margin-right: 0;
+}
+
+.my-cell-1 {
+	width: 270px;
+}
+
+.my-cell-2 {
+	width: 570px;
+}
+
+.my-cell-3 {
+	width: 870px;
+}
+
+.my-cell-4 {
+	width: 1170px;
+}
+
+.my-container {
+	margin: 0 auto;
+	width: 1170px;
+}
+
+
+
