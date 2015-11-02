@@ -1,39 +1,111 @@
+/* BASE */
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
 body {
-	color: #eee;
+	color: #7f8c8c;
 	font: 12px Arial, sans-serif;
 }
 
+body {
+	color: #7f8c8c;
+	font: 12px 'Open Sans', Arial, sans-serif;
+}
 
-.row {
-	overflow: hidden;
-	background-color: #c00;
-	padding: 10px;
+h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 10px;
 }
 
-.row .cell:last-child {
-	margin-right: 0;
-}
-
-.cell {
+/* GRID */
+.fl-left {
 	float: left;
-	font-size: 14px;
-	color: #fff;
-	padding: 10px;
 }
 
-.cell200 {
-	width: 200px;
+.fl-right {
+	float: right;
 }
 
-.cell170 {
-	width: 170px;
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.is-relative {
+	position: relative;
+}
+
+.row:before, .row:after {
+	content:"";
+	display: table ;
+	clear:both;
+}
+
+.my-row {
+	margin-bottom: 40px;
+}
+
+[class*='my-cell-'] {
+	float: left;
 	margin-right: 30px;
 }
 
-.cell_1 { background-color: #eee;}
-.cell_2 { background-color: #999;}
-.cell_3 { background-color: #666;}
+[class*='my-cell-']:last-of-type {
+	margin-right: 0;
+}
+
+.my-cell-1 {
+	width: 130px;
+}
+
+.my-cell-2 {
+	width: 270px;
+}
+
+.my-cell-3 {
+	width: 370px;
+}
+
+.my-cell-4 {
+	width: 570px;
+}
+
+.my-cell-5 {
+	width: 870px;
+}
+
+.my-cell-6 {
+	width: 1170px;
+}
+
+.my-container {
+	margin: 0 auto;
+	width: 1170px;
+}
+
+/* ICONS */
+
+[class*='icn-'] {
+	display: inline-block;
+	background: url('img/sprite_1.png') no-repeat 0 0;
+}
+
+
+/* SLIDER Compont */
+
+
+
 
 
 
