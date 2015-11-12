@@ -56,6 +56,10 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 40px;
 }
 
+.my-small-row {
+	margin-bottom: 15px;
+}
+
 [class*='my-cell-'] {
 	float: left;
 	margin-right: 30px;
@@ -238,15 +242,44 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-.svg {
-	width: 300px;
-	height: 300px;
-	margin: 10px;
+/*Tabs*/
+
+.temp-tabs {
+	margin: 2rem auto;
+	width: 50rem;
 }
 
-.svg-figure {
-	_fill: #c00;
+[class*='inp-tab-'] {
+	position: absolute;left: -99999px;
 }
+
+.tab-content {
+	display: none;
+}
+
+[class*='inp-tab-']:checked + .tab-content {
+	display: block;
+}
+
+.css-tabs-lbl {
+	display: block;
+	float: left;
+	border: 1px solid #eee;
+	padding: 6px 14px;
+	margin-right: -1px;
+}
+
+.css-tabs-lbl:hover {
+	background-color: #eee;
+	cursor: pointer;
+}
+
+.tab-content {
+	border: 1px solid #eee;
+	margin-top: -1px;
+	padding: 10px;
+}
+
 
 
 

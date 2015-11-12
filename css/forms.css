@@ -1,0 +1,157 @@
+/*FORM styles*/
+
+label {
+	display: block;
+	margin-bottom: 2px;
+}
+
+label.inline {
+	display: inline-block;
+}
+
+.form-field {
+	border: 1px solid #ccc;
+	padding: 8px;
+	color: #ccc;
+	width: 100%;
+	resize: none;
+}
+
+input[type="url"] {
+	padding-left: 52px;
+}
+
+.custom-url {
+	position: relative;
+}
+
+.custom-url:before {
+	content: 'http://';
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	padding: 0 8px;
+	background-color: #eee;
+	border: 1px solid #ccc;
+	font-size: 10px;
+	line-height: 29px;
+}
+
+textarea.form-field {
+	min-height: 80px;
+}
+
+.form-field:focus {
+	outline: none;
+	border-color: #008CBA;
+	color: #008CBA;
+}
+
+.error .form-field {
+	border-color: #c00;
+	color: #c00;
+}
+
+.confirm .form-field {
+	border-color: #008CBA;
+	color: #008CBA;
+}
+
+.error label {
+	color: #c00;
+}
+
+.error .lbl-response,
+.confirm .lbl-response {
+	display: block;
+}
+
+.error-lbl {
+	background-color: #c00;
+}
+
+.confirm-lbl {
+	background-color: #008CBA;
+}
+
+.lbl-response {
+	color: #fff;
+	display: none;
+	padding: 4px;
+	font-size: 10px;
+	font-style: italic;
+}
+
+
+.custom-chb {
+	position: absolute;
+	left: -99999px;
+}
+
+.custom-chb + label {
+	padding-left: 26px;
+	line-height: 16px;
+	cursor: pointer;
+	position: relative;
+}
+
+.custom-chb + label:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 16px;
+	height:16px;
+	border: 1px solid #ccc;
+}
+
+.custom-chb:checked + label:before {
+	border-color: #008CBA;
+}
+
+.custom-chb:checked + label:after {
+	content: '';
+	position: absolute;
+	left: 3px;
+	top: 3px;
+	width: 10px;
+	height: 10px;
+	background-color: #008CBA;
+}
+
+.my-link {
+	background: #666;
+	color: #fff;
+	-webkit-transition: background 1s;
+	transition: background 1s;
+
+	display: block;
+	padding: 10px;
+	margin-bottom: 150px;
+}
+
+.my-link:hover {
+	background: #C00;
+}
+
+@keyframes anim {
+	0% {margin-left:3px;margin-top:3px;background-color:#7F0055;}
+	30% {margin-left:3px;margin-top:250px;background-color:#7F0055;}
+	60% {margin-left:500px;margin-top:250px;background-color:black;}
+	100% {margin-left:3px;margin-top:3px;background-color:#7F0055;}
+}
+
+.div {
+	animation:anim 6s 3;
+	width: 300px;
+	height: 300px;
+}
+
+
+
+
+
+
+
+
+

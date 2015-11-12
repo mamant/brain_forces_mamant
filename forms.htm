@@ -3,11 +3,70 @@
 <head>
 	<meta charset="UTF-8">
 	<title>FORMS</title>
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/forms.css">
 </head>
 <body>
+<div class="my-container" style="margin: 50px 0;">
+	<form name="my-form" class="my-form" action="">
+		<div class="row my-small-row">
+			<div class="my-cell-2">
+				<label for="user-name">User name</label>
+				<input type="text" id="user-name" class="form-field">
+			</div>
+		</div>
+		<div class="row my-small-row">
+			<div class="my-cell-2 error">
+				<label for="user-email">User email</label>
+				<input type="text" id="user-email" class="form-field">
+				<div class="lbl-response error-lbl">
+					Email is not valid
+				</div>
+			</div>
+		</div>
+
+		<div class="row my-small-row">
+			<div class="my-cell-2 confirm">
+				<label for="user-web">User web site</label>
+				<input type="text" id="user-web" class="form-field">
+				<div class="lbl-response confirm-lbl">
+					This field is correct
+				</div>
+			</div>
+		</div>
+
+		<div class="row my-small-row">
+			<div class="my-cell-2">
+				<label for="user-web2">User web site</label>
+				<div class="custom-url">
+					<input type="url"
+						id="user-web2"
+						class="form-field"
+						placeholder="Enter web site">
+				</div>
+			</div>
+		</div>
+
+		<div class="row my-small-row">
+			<div class="my-cell-2">
+				<label for="user-address">User address</label>
+				<textarea name="" id="user-address" class="form-field"></textarea>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="my-cell-2">
+				<input type="checkbox" class="custom-chb" id="my-chb">
+				<label for="my-chb">Check here</label>
+			</div>
+		</div>
+	</form>
+</div>
+
+<a href="#" class="my-link">My link</a>
+
+<div class="div"></div>
+
 
 
 </body>
