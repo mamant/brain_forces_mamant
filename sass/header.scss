@@ -1,0 +1,23 @@
+header {
+	@extend .header;
+
+	margin-bottom: 20px;
+}
+
+.site-header {
+	width: 100%;
+	height: 300px;
+
+	&__logo {
+		float: left;
+		margin: 10px 0 0;
+	}
+
+	&__menu {
+		position: absolute;
+
+		&--item {
+			float: left;
+		}
+	}
+}
