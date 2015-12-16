@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>textarea validation</title>
+</head>
+<body>
+
+<form class="textarea-form">
+	<label for="message">Message</label><br>
+	<textarea data-max="100" data-min="100" id="message"></textarea><br>
+	<div class="mytext"></div>
+	<button type="button" class="send-btn">Send</button>
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+	var myMessage = $('#message');
+	var maxLimit = myMessage.data('max');
+
+	$('.mytext').text('<strong>123</strong>');
+
+	// $('.send-btn').on('click', function () {
+	// 	console.log('Send click');
+	// });
+</script>
+
+
+
+
+
+</body>
+</html>
