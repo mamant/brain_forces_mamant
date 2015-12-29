@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dates</title>
+</head>
+<style>
+	.coll {
+		float:left;
+		padding: 0 10px;
+	}
+
+	.dates__placeholder {
+		background-color: #eee;
+	}
+</style>
+<body>
+
+<div class="dates">
+	<div class="coll">&#171;</div>
+	<div class="coll dates__placeholder"></div>
+	<div class="coll">&#187;</div>
+</div>
+
+<script>
+	var today = new Date();
+
+	function getTimeRange(options) {
+		var date = options.date || new Date();
+		var period = options.period || 3;
+		var datesRange = [];
+
+		for (var i = 0; i<period;i++) {
+			var dateInRange = new Date(date);
+			dateInRange.setDate(dateInRange.getDate() + i);
+
+			datesRange.push(dateInRange.getDate());
+		}
+
+		renderDates(datesRange);
+	}
+
+	function renderDates(dates) {
+		var datesPlaceholder = document.querySelector('.dates__placeholder');
+		dates.forEach(function (item) {
+			datesPlaceholder.insertAdjacentHTML('beforeEnd', '<div class="coll">' + item + '</div>');
+		});
+
+	}
+
+	getTimeRange({
+		date: new Date(2014, 12, 20),
+		period: 5
+	});
+
+</script>
+
+</body>
+</html>
