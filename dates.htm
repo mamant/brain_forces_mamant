@@ -28,6 +28,7 @@
 	function getTimeRange(options) {
 		var date = options.date || new Date();
 		var period = options.period || 3;
+
 		var datesRange = [];
 
 		for (var i = 0; i<period;i++) {
@@ -45,11 +46,10 @@
 		dates.forEach(function (item) {
 			datesPlaceholder.insertAdjacentHTML('beforeEnd', '<div class="coll">' + item + '</div>');
 		});
-
 	}
 
 	getTimeRange({
-		date: new Date(2014, 12, 20),
+		date: today,
 		period: 5
 	});
 
