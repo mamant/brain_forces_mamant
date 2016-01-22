@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>window on resize()</title>
+
+	<style>
+		.my-cool-modal {
+			width: 300px;
+			padding: 20px;
+			background: #eee;
+			position: absolute;
+			left: 200px;
+			top: 300px;
+
+			font: 14px/18px solid Arial, sans-serif;
+		}
+	</style>
+</head>
+<body>
+<div class="window-size"></div>
+
+<div class="event">Text</div>
+
+<div class="my-cool-modal">
+	Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів. "Риба" не тільки успішно пережила п'ять століть, але й прижилася в електронному верстуванні, залишаючись по суті незмінною. Вона популяризувалась в 60-их роках минулого сторіччя завдяки виданню зразків шрифтів Letraset, які містили уривки з Lorem Ipsum, і вдруге - нещодавно завдяки програмам комп'ютерного верстування на кшталт Aldus Pagemaker, які використовували різні версії Lorem Ipsum.
+</div>
+
+<script>
+	// window.onresize = doResize;
+	// window.onload = readyPage
+
+	// function doResize(){
+	// 	document.querySelector('.window-size').innerHTML = '<b>W: </b>' + window.innerWidth + ' ' + '<b>H:</b> ' + window.innerHeight;
+	// }
+
+	// function readyPage() {
+	// 	document.querySelector('.window-size').innerHTML = 'My page is ready';
+	// }
+
+	var modal = document.querySelector('.my-cool-modal');
+	var myModal = {
+		'width': modal.offsetWidth,
+		'height': modal.offsetHeight,
+		'top': modal.offsetLeft,
+		'left': modal.offsetTop
+	};
+
+	function eventHendler(e) {
+		debugger;
+	}
+
+
+	document.querySelector('.event').addEventListener('click', eventHendler)
+</script>
+
+</body>
+</html>

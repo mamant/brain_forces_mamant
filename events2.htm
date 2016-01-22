@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> events 2</title>
+</head>
+<body>
+
+
+<ul class="main">
+	<li>Text1</li>
+	<li>Text2</li>
+	<li>Text3</li>
+	<li>Text4</li>
+	<li>Text5</li>
+</ul>
+
+
+<script>
+	function handler(e) {
+		debugger;
+		if (e.target.nodeName !== 'LI') {
+			document.querySelector('.main').style.backgroundColor = '#fff';
+			return;
+		}
+		e.target.closest('ul').style.backgroundColor = '#c00';
+	}
+
+	document.addEventListener('click', handler);
+</script>
+</body>
+</html>
