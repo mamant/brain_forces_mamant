@@ -4,34 +4,28 @@
 	<meta charset="UTF-8">
 	<title>FORMS</title>
 	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/forms.css">
 </head>
 <body>
 <div class="my-container" style="margin: 50px 0;">
-	<form name="my-form" class="my-form" action="">
+	<div class="error-message"></div>
+	<form onsubmit="return false" name="profile" class="my-form" action="">
 		<div class="row my-small-row">
 			<div class="my-cell-2">
 				<label for="user-name">User name</label>
-				<input type="text" id="user-name" class="form-field">
+				<input type="text" id="user-name" data-validate="required" class="form-field">
 			</div>
 		</div>
 		<div class="row my-small-row">
-			<div class="my-cell-2 error">
+			<div class="my-cell-2">
 				<label for="user-email">User email</label>
-				<input type="text" id="user-email" class="form-field">
-				<div class="lbl-response error-lbl">
-					Email is not valid
-				</div>
+				<input type="text" id="user-email" data-validate="required" class="form-field">
 			</div>
 		</div>
 
 		<div class="row my-small-row">
 			<div class="my-cell-2 confirm">
 				<label for="user-web">User web site</label>
-				<input type="text" id="user-web" class="form-field">
-				<div class="lbl-response confirm-lbl">
-					This field is correct
-				</div>
+				<input type="text" id="user-web" data-validate="required" class="form-field">
 			</div>
 		</div>
 
@@ -60,13 +54,52 @@
 				<label for="my-chb">Check here</label>
 			</div>
 		</div>
+		<button type="submit">Save</button>
 	</form>
 </div>
 
-<a href="#" class="my-link">My link</a>
 
-<div class="div"></div>
+<script>
+	function Form(elem) {
+		this.required = function(el) {
+			if (!el.value && el.hasAttribute('data-validate')) {
+				this.showError('This field is required', el);
+			}
+		};
 
+		this.showError = function (messege, el) {
+			this.hideError();
+			el.insertAdjacentHTML('afterend', '<div class="error-message">'+ messege + '</div>');
+		}
+
+		this.hideError = function () {
+			document.querySelector('.error-message').innerHTML = '';
+		}
+
+		var self = this;
+
+		elem.onchange = function(e) {
+			var target = e.target;
+			var action = target.getAttribute('data-validate');
+			if (action) {
+				self[action](target);
+			}
+		};
+
+		elem.onsubmit = function(e) {
+			e.preventDefault();
+			var formsElements = elem.elements;
+			debugger;
+
+			for(var i = 0; i < formsElements.length; i++) {
+				self['required'](formsElements[i]);
+			}
+
+		};
+	}
+
+	new Form(document.forms.profile);
+</script>
 
 
 </body>
