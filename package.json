@@ -1,0 +1,25 @@
+{
+  "name": "brain_forces_mamant",
+  "version": "1.0.0",
+  "description": "- 1 - 2 - 3",
+  "main": "text-obg.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mamant/brain_forces_mamant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mamant/brain_forces_mamant/issues"
+  },
+  "homepage": "https://github.com/mamant/brain_forces_mamant",
+  "dependencies": {
+    "grunt": "^0.4.5"
+  },
+  "devDependencies": {
+    "grunt-sprite-generator": "0.0.5"
+  }
+}
